@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Chatbot</title>
+</head>
+<body>
+  <header>
+        <nav class="navbar">
+            <div class="navbar-logo">
+                <img src="logo.png" alt="Kampus Merdeka Logo">
+            </div>
+            <ul>
+                <li><a href="#beranda">Beranda</a></li>
+                <li><a href="#program">Program</a>
+                    <ul>
+                        <li><a href="#data-analyst">Data Analyst</a></li>
+                        <li><a href="#software-development">Software Development</a></li>
+                        <li><a href="#digital-marketing">Digital Marketing</a></li>
+                    </ul>
+                </li>
+                <li><a href="#notifikasi">Notifikasi</a></li>
+                <li><a href="#kegiatanku">Kegiatanku</a></li>
+            </ul>
+            <div class="navbar-profile">
+                <img src="profile.png" alt="Profile Picture">
+            </div>
+        </nav>
+    </header>
+<main>
+        <section id="beranda">
+            <div class="banner">
+                <h1>Selamat Datang di Website Menarik</h1>
+                <p>Temukan program yang tepat untuk pengembangan karir Anda</p>
+            </div>
+        </section>
+
+        <section id="tentang-kami">
+            <h2>Tentang Kami</h2>
+            <p>Informasi singkat mengenai perusahaan.</p>
+        </section>
+
+        <section id="program-unggulan">
+            <h2>Program Unggulan</h2>
+            <p>Detail tentang program-program unggulan kami.</p>
+        </section>
+
+        <section id="testimoni">
+            <h2>Testimoni</h2>
+            <p>Apa kata mereka yang telah mengikuti program kami.</p>
+        </section>
+
+        <section id="berita-dan-acara">
+            <h2>Berita dan Acara Terkini</h2>
+            <p>Informasi terbaru tentang kegiatan dan acara yang akan datang.</p>
+        </section>
+    </main>
+<div class="container">
+    <div class="chatbox">
+        <div class="chatbox__support">
+            <div class="chatbox__header">
+                <div class="chatbox__image--header">
+                    <img src="https://img.icons8.com/color/48/000000/circled-user-female-skin-type-5--v1.png" alt="image">
+                </div>
+                <div class="chatbox__content--header">
+                    <h4 class="chatbox__heading--header">iBot</h4>
+                    <p class="chatbox__description--header">Hi. Nama saya iBot, silakan tanyakan seputar Kampus Merdeka</p>
+                </div>
+            </div>
+            <div class="chatbox__messages">
+                <div></div>
+            </div>
+            <div class="chatbox__footer">
+                <input type="text" placeholder="Write a message...">
+                <button class="chatbox__send--footer send__button">Send</button>
+            </div>
+        </div>
+        <div class="chatbox__button">
+            <button><img src="{{ url_for('static', filename='images/chatbox-icon.svg') }}" /></button>
+        </div>
+    </div>
+</div>
+
+    <script>
+        $SCRIPT_ROOT = {{ request.script_root|tojson }};
+    </script>
+    <script type="text/javascript" src="{{ url_for('static', filename='app.js') }}"></script>
+    <footer>
+        <section id="informasi-perusahaan">
+            <h2>Informasi Perusahaan</h2>
+            <ul>
+                <li><a href="#tentang-perusahaan">Tentang Perusahaan</a></li>
+                <li><a href="#kontak-kami">Kontak Kami</a></li>
+                <li><a href="#kebijakan-privasi">Kebijakan Privasi</a></li>
+                <li><a href="#syarat-dan-ketentuan">Syarat dan Ketentuan</a></li>
+            </ul>
+        </section>
+    </footer>
+</body>
+</html>
